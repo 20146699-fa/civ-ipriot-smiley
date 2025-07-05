@@ -41,3 +41,10 @@ class Happy(Smiley, Blinkable):
         time.sleep(delay)
         self.draw_eyes(wide_open=True)
         self.show()
+
+from happy import Happy
+
+if __name__ == '__main__':
+    h = Happy()
+    h.show()         # This displays the smiley
+    h.blink()        # Optional: make it blink
