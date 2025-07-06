@@ -349,7 +349,7 @@ BLANK = (0, 0, 0)
 > Replace all instances of YELLOW in Smiley’s pixel grid with GREEN.
 
 
-  Here's a revised version of the "Flexible Colors – Step 1" section for the smiley project, incorporating your specifications for formatting and content updates:
+
 
   ### 3.2. Flexible Colors – Step 1
 
