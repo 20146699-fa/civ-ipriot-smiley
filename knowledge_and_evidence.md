@@ -101,19 +101,15 @@ python3 main.py
 
 5. Examining `smiley.py`, provide an example of a class variable and an instance variable (attribute). Explain **why** one is defined as a class variable and the other as an instance variable.
 
-> 
-YELLOW = (255, 255, 0) is a class variable (defined at the class level and shared).
-
+>YELLOW = (255, 255, 0) is a class variable (defined at the class level and shared).
 self.pixels is an instance variable (defined inside __init__, unique to each object).
-
 Class variables define shared constants like colors; instance variables represent object state.
 >
 
 6. Examine `happy.py`, and identify the constructor (initializer) for the `Happy` class:
    1. What is the purpose of a constructor (in general) and this one (in particular)?
 
-   > 
-def __init__(self):
+   >def __init__(self):
 This is the constructor for the Happy class.
 It initializes the smiley with a happy face pattern by calling:
 
@@ -121,8 +117,7 @@ It initializes the smiley with a happy face pattern by calling:
 
    2. What statement(s) does it execute (consider the `super` call), and what is the result?
 
-   > 
-super().__init__(color=Smiley.YELLOW)
+   >super().__init__(color=Smiley.YELLOW)
 super() ensures the Smiley class’s constructor runs, setting color and creating a base pixel matrix.
    >
 
@@ -130,8 +125,7 @@ super() ensures the Smiley class’s constructor runs, setting color and creatin
 
 1. What code style is used in the code? Is it likely to be the same as the code style used in the SenseHat? Give to reasons as to why/why not:
 
-> 
-PEP 8 — clear naming, spacing, and docstrings.
+>PEP 8 — clear naming, spacing, and docstrings.
 Likely same as SenseHat?
 Possibly not. Real SenseHAT is written in C/C++; this is student Python code. Their internal style may differ
 
@@ -139,18 +133,16 @@ Possibly not. Real SenseHAT is written in C/C++; this is student Python code. Th
 
 2. List three aspects of this convention you see applied in the code.
 
-> 
-- Snake_case for function names (draw_eyes)
-- Triple-quoted docstrings
-- Constants in ALL_CAPS (YELLOW)
+>Snake_case for function names (draw_eyes)
+Triple-quoted docstrings
+Constants in ALL_CAPS (YELLOW)
 
 >
 
 3. Give two examples of organizational documentation in the code.
 
-> 
-- Docstring in class: """Provides a Smiley with a happy expression"""
-- Inline comment in draw_eyes: # eyes open or closed
+>Docstring in class: """Provides a Smiley with a happy expression"""
+Inline comment in draw_eyes: # eyes open or closed
 
 
 
@@ -173,8 +165,7 @@ Possibly not. Real SenseHAT is written in C/C++; this is student Python code. Th
 
 2. Explain the concept of abstraction, giving an example from the project (note "implementing an ABC" is **not** in itself an example of abstraction). (Max 150 words)
 
-> 
-Abstraction means exposing only relevant behavior. 
+>Abstraction means exposing only relevant behavior. 
 The Blinkable class defines a blinking interface without specifying how blinking is done—leaving it to the subclasses.
 This allows polymorphic interaction while hiding internal specifics
 
@@ -182,8 +173,7 @@ This allows polymorphic interaction while hiding internal specifics
 
 3. What is the name of the process of deriving from base classes? What is its purpose in this project? (Max 150 words)
 
-> 
-Inheritance — It allows Happy and Sad to reuse shared smiley behavior from Smiley and customize specific expressions without rewriting setup/display logic
+>Inheritance — It allows Happy and Sad to reuse shared smiley behavior from Smiley and customize specific expressions without rewriting setup/display logic
 
 >
 
@@ -192,8 +182,7 @@ Inheritance — It allows Happy and Sad to reuse shared smiley behavior from Smi
 Compare and contrast the classes Happy and Sad.
 
 1. What is the key difference between the two classes?
-   > 
-The key difference between the HappySmiley and SadSmiley classes is the pixel representation used to display the emotion on the LED matrix.
+   >The key difference between the HappySmiley and SadSmiley classes is the pixel representation used to display the emotion on the LED matrix.
 Each class defines a unique pattern of colors in the image or pixels attribute that represents either a happy or sad facial expression.
    >
 2. What are the key similarities?
